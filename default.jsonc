@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver",
+    ":disableRateLimiting",
+    ":maintainLockFilesWeekly"
+  ],
+  "timezone": "Asia/Tokyo",
+  "addLabels": [
+    "renovate"
+  ],
+  "suppressNotifications": [
+    "prIgnoreNotification"
+  ],
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "vulnerabilityAlerts": {
+    "addLabels": [
+      "security"
+    ],
+    "extends": [
+      ":assignAndReview(ci7lus)"
+    ]
+  }
+}
